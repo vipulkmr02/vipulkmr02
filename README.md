@@ -15,11 +15,7 @@ Linux is more than a development environment for me. I genuinely enjoy
 exploring the OS, processes, networking, services and the machinery that
 keeps a system running.
 
-Outside the terminal, I have an unreasonable amount of enthusiasm for
-Jurassic Park.
-
-Editor:      Neovim
-Environment: Linux
+Arsenal: nvim | arch | tmux
 ```
 
 ## `vipul@github:~$ ls ~/stack`
