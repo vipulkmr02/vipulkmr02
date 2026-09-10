@@ -13,82 +13,60 @@ infrastructure/ Docker · Redis · RabbitMQ · PostgreSQL · Git
 ai/             RAG · LLM APIs · LangChain · Vector Databases
 ```
 
-## `vipul@github:~$ ps aux | grep projects`
-
-```text
-vipul    RUNNING    Logalyser
-vipul    RUNNING    LinkedIn Handler
-vipul    LEARNING   Distributed Systems
-vipul    ALWAYS     Linux Experiments
-```
-
-## `vipul@github:~$ tree ~/projects/logalyser`
-
-```text
-logalyser/
-├── api/              FastAPI + SQLAlchemy
-├── database/         PostgreSQL + Alembic
-├── watchers/         Independent monitoring processes
-├── event-stream/     Redis Streams
-├── workers/          Event consumers
-└── frontend/         React Native
-```
-
-### `vipul@github:~$ cat ~/projects/logalyser/README`
+## `vipul@github:~$ cat ~/projects/logalyser/README`
 
 ```text
 Logalyser
 ─────────
-A distributed log monitoring and incident analysis system.
+A log monitoring and incident analysis system built around independent
+watcher processes and an event-driven backend.
 
-Watchers monitor configured targets as independent processes.
-Events are published into Redis Streams instead of being coupled
-with the API process.
+Configured watchers monitor files and directories as separate processes
+and publish events through Redis Streams. Workers consume those events
+without coupling monitoring work to the API server.
 
-Workers consume the stream for event processing and analysis.
-The FastAPI service manages watcher configuration and exposes
-CRUD APIs used by the frontend.
+FastAPI and SQLAlchemy provide the management layer, with PostgreSQL and
+Alembic handling persistent watcher configuration and schema migrations.
+A React Native frontend provides a view into watchers and their events.
 
-STATUS
-  Backend architecture    [████████░░] building
-  Watcher runtime         [██████████] working
-  Redis event stream      [██████████] working
-  Watcher CRUD API        [██████░░░░] building
-  Mobile frontend         [████░░░░░░] building
-  Incident analysis       [░░░░░░░░░░] planned
+Stack: Python · FastAPI · SQLAlchemy · PostgreSQL · Alembic · Redis · Docker
 ```
 
-## `vipul@github:~$ find ~/projects -maxdepth 1 -type d`
-
-### `~/projects/linkedin-handler`
+## `vipul@github:~$ cat ~/projects/linkedin-handler/README`
 
 ```text
-A developer activity pipeline that watches repository changes,
-aggregates diffs and turns meaningful code changes into material
-for technical LinkedIn posts.
+LinkedIn Handler
+────────────────
+A developer activity pipeline that watches source repositories and turns
+meaningful code changes into material for technical LinkedIn posts.
 
-Pipeline:
-  repository → watcher → diff aggregation → change analysis → post generation
+It observes filesystem changes, aggregates multi-file Git diffs and feeds
+those changes into an LLM-assisted analysis pipeline before generating a
+human-readable explanation of what changed and why it matters.
 
-Focus:
-  Python · Git · filesystem events · LLM-assisted change analysis
+Stack: Python · Git · Watchdog · LLM APIs
 ```
 
-### `~/projects/async-worker-lab`
+## `vipul@github:~$ cat ~/projects/async-worker-lab/README`
 
 ```text
-FastAPI + Celery playground for learning asynchronous workers,
-background jobs and distributed task execution.
+Async Worker Lab
+────────────────
+A small FastAPI and Celery environment I use to explore background jobs,
+message brokers, asynchronous execution and worker-based architectures.
 
-Stack:
-  FastAPI · Celery · Redis · Docker
+The project runs FastAPI, Celery and Redis as separate services with Docker,
+letting me experiment with task dispatch, result backends and worker lifecycle.
+
+Stack: Python · FastAPI · Celery · Redis · Docker
 ```
 
 ## `vipul@github:~$ cat ~/about`
 
 ```text
-Backend developer interested in the machinery underneath abstractions.
-Building backend systems, experimenting with Linux, and learning distributed systems.
+Interested in backend systems, Linux, networking and distributed systems.
+I like building things that make me look underneath the abstraction instead
+of only using it.
 
 Current focus: Logalyser
 Editor:        Neovim
