@@ -1,0 +1,33 @@
+<svg width="900" height="430" viewBox="0 0 900 430" fill="none" xmlns="http://www.w3.org/2000/svg">
+<style>
+  text { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 17px; fill: #d8dee9; }
+  .dim { fill: #7d8590; }
+  .prompt { fill: #f0f0f0; font-weight: 700; }
+  .green { fill: #a3be8c; }
+  .cursor { animation: blink 1s steps(1) infinite; }
+  .line { opacity: 0; animation: appear .01s linear forwards; }
+  .l1 { animation-delay: .4s; } .l2 { animation-delay: 1.1s; }
+  .l3 { animation-delay: 1.8s; } .l4 { animation-delay: 2.5s; }
+  .l5 { animation-delay: 3.2s; } .l6 { animation-delay: 3.9s; }
+  .l7 { animation-delay: 4.6s; } .l8 { animation-delay: 5.3s; }
+  @keyframes appear { to { opacity: 1; } }
+  @keyframes blink { 50% { opacity: 0; } }
+  @media (prefers-reduced-motion: reduce) { .line { opacity: 1; animation: none; } .cursor { animation: none; } }
+</style>
+<rect width="900" height="430" rx="12" fill="#0d1117"/>
+<rect width="900" height="42" rx="12" fill="#161b22"/>
+<rect y="30" width="900" height="12" fill="#161b22"/>
+<circle cx="22" cy="21" r="6" fill="#484f58"/><circle cx="43" cy="21" r="6" fill="#484f58"/><circle cx="64" cy="21" r="6" fill="#484f58"/>
+<text x="450" y="27" text-anchor="middle" class="dim" font-size="14">vipul@github: ~</text>
+<g transform="translate(25 78)">
+  <text class="line l1" y="0"><tspan class="prompt">vipul@github</tspan><tspan class="dim">:~$ </tspan><tspan>whoami</tspan></text>
+  <text class="line l2 green" y="31">Vipul Kumar Gupta</text>
+  <text class="line l3" y="75"><tspan class="prompt">vipul@github</tspan><tspan class="dim">:~$ </tspan><tspan>cat /etc/developer.conf</tspan></text>
+  <text class="line l4" y="106">ROLE="Backend Developer"</text>
+  <text class="line l5" y="137">STACK="Python FastAPI SQLAlchemy PostgreSQL Redis Docker"</text>
+  <text class="line l6" y="168">EDITOR="nvim"   OS="Linux"</text>
+  <text class="line l7" y="212"><tspan class="prompt">vipul@github</tspan><tspan class="dim">:~$ </tspan><tspan>systemctl is-active curiosity.service</tspan></text>
+  <text class="line l8 green" y="243">active</text>
+  <text x="0" y="287"><tspan class="prompt">vipul@github</tspan><tspan class="dim">:~$ </tspan><tspan class="cursor">█</tspan></text>
+</g>
+</svg>
