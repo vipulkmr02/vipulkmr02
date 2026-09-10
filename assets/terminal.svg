@@ -23,7 +23,7 @@
   <text class="line l1" y="0"><tspan class="prompt">vipul@github</tspan><tspan class="dim">:~$ </tspan><tspan>whoami</tspan></text>
   <text class="line l2 green" y="31">Vipul Kumar Gupta</text>
   <text class="line l3" y="75"><tspan class="prompt">vipul@github</tspan><tspan class="dim">:~$ </tspan><tspan>cat /etc/developer.conf</tspan></text>
-  <text class="line l4" y="106">ROLE="Backend Developer"</text>
+  <text class="line l4" y="106">FOCUS="Backend Systems · Linux · Distributed Systems"</text>
   <text class="line l5" y="137">STACK="Python FastAPI SQLAlchemy PostgreSQL Redis Docker"</text>
   <text class="line l6" y="168">EDITOR="nvim"   OS="Linux"</text>
   <text class="line l7" y="212"><tspan class="prompt">vipul@github</tspan><tspan class="dim">:~$ </tspan><tspan>systemctl is-active curiosity.service</tspan></text>
