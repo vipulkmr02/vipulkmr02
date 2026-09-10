@@ -22,6 +22,68 @@ vipul    LEARNING   Distributed Systems
 vipul    ALWAYS     Linux Experiments
 ```
 
+## `vipul@github:~$ tree ~/projects/logalyser`
+
+```text
+logalyser/
+├── api/              FastAPI + SQLAlchemy
+├── database/         PostgreSQL + Alembic
+├── watchers/         Independent monitoring processes
+├── event-stream/     Redis Streams
+├── workers/          Event consumers
+└── frontend/         React Native
+```
+
+### `vipul@github:~$ cat ~/projects/logalyser/README`
+
+```text
+Logalyser
+─────────
+A distributed log monitoring and incident analysis system.
+
+Watchers monitor configured targets as independent processes.
+Events are published into Redis Streams instead of being coupled
+with the API process.
+
+Workers consume the stream for event processing and analysis.
+The FastAPI service manages watcher configuration and exposes
+CRUD APIs used by the frontend.
+
+STATUS
+  Backend architecture    [████████░░] building
+  Watcher runtime         [██████████] working
+  Redis event stream      [██████████] working
+  Watcher CRUD API        [██████░░░░] building
+  Mobile frontend         [████░░░░░░] building
+  Incident analysis       [░░░░░░░░░░] planned
+```
+
+## `vipul@github:~$ find ~/projects -maxdepth 1 -type d`
+
+### `~/projects/linkedin-handler`
+
+```text
+A developer activity pipeline that watches repository changes,
+aggregates diffs and turns meaningful code changes into material
+for technical LinkedIn posts.
+
+Pipeline:
+  repository → watcher → diff aggregation → change analysis → post generation
+
+Focus:
+  Python · Git · filesystem events · LLM-assisted change analysis
+```
+
+### `~/projects/async-worker-lab`
+
+```text
+FastAPI + Celery playground for learning asynchronous workers,
+background jobs and distributed task execution.
+
+Stack:
+  FastAPI · Celery · Redis · Docker
+```
+
 ## `vipul@github:~$ cat ~/about`
 
 ```text
